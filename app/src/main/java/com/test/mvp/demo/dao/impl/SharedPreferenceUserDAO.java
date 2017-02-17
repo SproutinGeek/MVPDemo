@@ -9,6 +9,7 @@ import com.test.mvp.demo.dao.IUserDAO;
 import com.test.mvp.demo.dto.UserDTO;
 
 /**
+ * Persistent storage using shared preference.
  * Created by Arun Pillai on 2/17/2017.
  */
 

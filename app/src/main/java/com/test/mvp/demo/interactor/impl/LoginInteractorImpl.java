@@ -9,6 +9,7 @@ import com.test.mvp.demo.interactor.ILoginInteractor;
 import com.test.mvp.demo.listeners.OnFinishLoginListener;
 
 /**
+ * Implementation of LoginInteractor.
  * Created by Arun Pillai on 2/16/2017.
  */
 

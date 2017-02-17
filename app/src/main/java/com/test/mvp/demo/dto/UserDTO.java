@@ -3,6 +3,7 @@ package com.test.mvp.demo.dto;
 import java.io.Serializable;
 
 /**
+ * Serializable data transfer object for user details.
  * Created by Arun Pillai on 2/16/2017.
  */
 

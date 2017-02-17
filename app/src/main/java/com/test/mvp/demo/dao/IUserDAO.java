@@ -7,6 +7,11 @@ import com.test.mvp.demo.dto.UserDTO;
  */
 
 public interface IUserDAO {
-
+    /**
+     * Store Logged in user details
+     *
+     * @param userDTO
+     * @return
+     */
     boolean saveUserDetails(UserDTO userDTO);
 }
