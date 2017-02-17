@@ -7,6 +7,7 @@ import com.test.mvp.demo.dao.impl.SharedPreferenceUserDAO;
 import com.test.mvp.demo.dto.UserDTO;
 import com.test.mvp.demo.interactor.ILoginInteractor;
 import com.test.mvp.demo.listeners.OnFinishLoginListener;
+import com.test.mvp.demo.presenter.exception.DefaultErrorBundle;
 
 /**
  * Implementation of LoginInteractor.
@@ -49,7 +50,7 @@ public class LoginInteractorImpl implements ILoginInteractor {
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
                 if(exception != null){
-                    onFinishLoginListener.onError(exception);
+                    onFinishLoginListener.onError(new DefaultErrorBundle(exception));
                 } else if(userDTO != null){
                     onFinishLoginListener.onSuccess(userDTO);
                     userDao.saveUserDetails(userDTO);
