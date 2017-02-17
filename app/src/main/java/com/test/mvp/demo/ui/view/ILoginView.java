@@ -3,6 +3,7 @@ package com.test.mvp.demo.ui.view;
 import android.support.annotation.StringRes;
 
 import com.test.mvp.demo.dto.UserDTO;
+import com.test.mvp.demo.presenter.exception.ErrorBundle;
 
 /**
  * View interface for the presenter to interact.
@@ -39,4 +40,11 @@ public interface ILoginView {
      * @param userDTO
      */
     void navigateToList(UserDTO userDTO);
+
+    /**
+     * Show error message in the screen.
+     *
+     * @param e {@link ErrorBundle}
+     */
+    void showException(ErrorBundle e);
 }

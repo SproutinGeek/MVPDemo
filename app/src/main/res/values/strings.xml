@@ -10,4 +10,5 @@
     <string name="username">Username</string>
     <string name="password_empty">Password cannot be empty.</string>
     <string name="please_wait">Please wait...</string>
+    <string name="default_error">Something went wrong. Pleae try later.</string>
 </resources>

@@ -8,6 +8,7 @@ import com.test.mvp.demo.interactor.ILoginInteractor;
 import com.test.mvp.demo.interactor.impl.LoginInteractorImpl;
 import com.test.mvp.demo.listeners.OnFinishLoginListener;
 import com.test.mvp.demo.presenter.ILoginPresenter;
+import com.test.mvp.demo.presenter.exception.ErrorBundle;
 import com.test.mvp.demo.ui.view.ILoginView;
 
 /**
@@ -55,7 +56,8 @@ public class LoginPresenterImpl implements ILoginPresenter, OnFinishLoginListene
     }
 
     @Override
-    public void onError(Exception e) {
+    public void onError(ErrorBundle e) {
         loginView.dismissProgress();
+        loginView.showException(e);
     }
 }

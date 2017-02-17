@@ -14,6 +14,7 @@ import android.widget.EditText;
 import com.test.mvp.demo.R;
 import com.test.mvp.demo.dto.UserDTO;
 import com.test.mvp.demo.presenter.ILoginPresenter;
+import com.test.mvp.demo.presenter.exception.ErrorBundle;
 import com.test.mvp.demo.presenter.impl.LoginPresenterImpl;
 import com.test.mvp.demo.ui.view.ILoginView;
 
@@ -34,15 +35,6 @@ public class LoginFragment extends Fragment implements ILoginView {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    private OnFragmentInteractionListener mListener;
-    private View rootView;
-    private ILoginPresenter loginPresenter;
-
     @BindView(R.id.user_name)
     protected EditText userName;
     @BindView(R.id.password)
@@ -50,6 +42,12 @@ public class LoginFragment extends Fragment implements ILoginView {
     @BindView(R.id.btn_login)
     protected Button loginButton;*/
     ProgressDialog progressDialog;
+    // TODO: Rename and change types of parameters
+    private String mParam1;
+    private String mParam2;
+    private OnFragmentInteractionListener mListener;
+    private View rootView;
+    private ILoginPresenter loginPresenter;
     private Context mContext;
 
     public LoginFragment() {
@@ -151,6 +149,11 @@ public class LoginFragment extends Fragment implements ILoginView {
     @Override
     public void navigateToList(UserDTO userDTO) {
         //TODO Naviagate to the next screen
+    }
+
+    @Override
+    public void showException(ErrorBundle e) {
+
     }
 
     /**

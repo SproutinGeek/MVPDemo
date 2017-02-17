@@ -1,6 +1,7 @@
 package com.test.mvp.demo.listeners;
 
 import com.test.mvp.demo.dto.UserDTO;
+import com.test.mvp.demo.presenter.exception.ErrorBundle;
 
 /**
  * On finish listener for the login bussiness request.
@@ -19,6 +20,6 @@ public interface OnFinishLoginListener {
      * On error of login intractions.
      * @param e
      */
-    void onError(Exception e);
+    void onError(ErrorBundle e);
 
 }
