@@ -10,12 +10,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.test.mvp.demo.R;
 import com.test.mvp.demo.dto.UserDTO;
 import com.test.mvp.demo.presenter.ILoginPresenter;
 import com.test.mvp.demo.presenter.exception.ErrorBundle;
 import com.test.mvp.demo.presenter.impl.LoginPresenterImpl;
+import com.test.mvp.demo.ui.exception.ExceptionMessageFactory;
 import com.test.mvp.demo.ui.view.ILoginView;
 
 import butterknife.BindView;
@@ -153,7 +155,7 @@ public class LoginFragment extends Fragment implements ILoginView {
 
     @Override
     public void showException(ErrorBundle e) {
-
+        Toast.makeText(mContext, ExceptionMessageFactory.getErrorMessage(e), Toast.LENGTH_SHORT).show();
     }
 
     /**
