@@ -1,4 +1,4 @@
-package com.test.mvp.demo.ui.fragment;
+package com.test.mvp.demo.ui.fragment.login;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -18,7 +18,6 @@ import com.test.mvp.demo.presenter.ILoginPresenter;
 import com.test.mvp.demo.presenter.exception.ErrorBundle;
 import com.test.mvp.demo.presenter.impl.LoginPresenterImpl;
 import com.test.mvp.demo.ui.exception.ExceptionMessageFactory;
-import com.test.mvp.demo.ui.view.ILoginView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -32,7 +31,7 @@ import butterknife.OnClick;
  * Use the {@link LoginFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class LoginFragment extends Fragment implements ILoginView {
+public class LoginFragment extends Fragment implements ILoginFragmentView {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";

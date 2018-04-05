@@ -1,4 +1,4 @@
-package com.test.mvp.demo.ui.view;
+package com.test.mvp.demo.ui.fragment.login;
 
 import android.support.annotation.StringRes;
 
@@ -10,7 +10,7 @@ import com.test.mvp.demo.presenter.exception.ErrorBundle;
  * Created by Arun Pillai on 2/16/2017.
  */
 
-public interface ILoginView {
+public interface ILoginFragmentView {
     /**
      * Show user name error happened.
      *

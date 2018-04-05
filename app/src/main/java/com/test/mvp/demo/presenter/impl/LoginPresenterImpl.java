@@ -9,17 +9,17 @@ import com.test.mvp.demo.interactor.impl.LoginInteractorImpl;
 import com.test.mvp.demo.listeners.OnFinishLoginListener;
 import com.test.mvp.demo.presenter.ILoginPresenter;
 import com.test.mvp.demo.presenter.exception.ErrorBundle;
-import com.test.mvp.demo.ui.view.ILoginView;
+import com.test.mvp.demo.ui.fragment.login.ILoginFragmentView;
 
 /**
  * Created by Arun Pillai on 2/16/2017.
  */
 
 public class LoginPresenterImpl implements ILoginPresenter, OnFinishLoginListener {
-    private ILoginView loginView;
+    private ILoginFragmentView loginView;
     private ILoginInteractor loginInteractor;
 
-    public LoginPresenterImpl(ILoginView loginView) {
+    public LoginPresenterImpl(ILoginFragmentView loginView) {
         this.loginView = loginView;
         this.loginInteractor = new LoginInteractorImpl();
     }
